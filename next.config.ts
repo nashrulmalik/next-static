@@ -1,12 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  output: 'export',             // Important for GitHub Pages deployment
-  basePath: '/next-static',     // Replace with your repository name
-  assetPrefix: '/next-static/', // Important for assets
+  output: 'export',
+  basePath: '/next-static',
+  assetPrefix: '/next-static/',
   images: {
-    unoptimized: true,          // Required for static export of images
+    unoptimized: true,
+    path: '/next-static/_next/image',
+    loader: 'custom',
+    loaderFile: './image-loader.ts',
   },
 };
 
