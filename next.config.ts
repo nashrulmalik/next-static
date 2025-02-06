@@ -6,9 +6,6 @@ const nextConfig: NextConfig = {
   assetPrefix: '/next-static/',
   images: {
     unoptimized: true,
-    path: '/next-static/_next/image',
-    loader: 'custom',
-    loaderFile: './image-loader.ts',
   },
 };
 
